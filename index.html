@@ -8,58 +8,44 @@
             margin: 0; 
         }
 
-        #box {
-            background-color: rgb(38, 163, 40);
-            text-align: left;
+        #header { 
+            background-color: rgba(38, 163, 40, 0.598);
             height: 60px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
             padding: 0 20px;
+            margin-top: 10px;
         }
 
-        
+        /* Group logo + name */
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 40px;
+            width: auto;
+            margin-right: 10px;
+        }
+
         .company-name {
-            font-size: 32px;
+            font-size: 15px;
             font-weight: bold;
-            font-family: "Georgia", serif;
-            letter-spacing: 2px;
-            background: linear-gradient(to right, #ffffff, #ffe600);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-    
-        .menu button {
-            background-color: white;
-            color: rgb(38, 163, 40);
-            border: none;
-            padding: 8px 15px;
-            margin-left: 10px;
-            font-size: 14px;
-            font-weight: bold;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .menu button:hover {
-            background-color: rgb(3, 1, 25);
-            color: white;
+            font-family: "Montserrat"
+            letter-spacing:0.5x;
+            color: rgb(41, 3, 255);
+            white-space: nowrap;
         }
     </style>
 </head>
 <body>
-    <div id="box">
-        <span class="company-name">Gayathri Enterprises</span>
-        <div class="menu">
-            <button>Home</button>
-            <button>Products</button>
-            <button>Services</button>
-            <button>Contact Us</button>
-            <button>About Us</button>
+    <div id="header">
+        <div class="logo-container">
+            <img src="images/headerimages/logo.png" alt="Logo">
+            <div class="company-name">Gayathri Enterprises</div>
         </div>
+        <!-- Later you can add menu on right side if needed -->
     </div>
 </body>
 </html>
