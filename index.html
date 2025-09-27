@@ -17,17 +17,42 @@
             font-weight: bold;  
             font-family: "Arial", sans-serif;
             letter-spacing: 2px; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        
+        .menu button {
+            background-color: white;
+            color: rgb(38, 163, 40);
+            border: none;
+            padding: 8px 15px;
+            margin-left: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .menu button:hover {
+            background-color: rgb(3, 1, 25);
+            color: white;
         }
     </style>
 </head>
 <body>
     <div id="box">
         Gayathri Enterprises
-        <span style="float: right; font-size: 16px; font-weight: normal; margin-right: 20px; margin-top: 15px;">
-            Home | Products | Services | Contact Us | About Us 
-        </span>
-        
+        <div class="menu">
+            <button>Home</button>
+            <button>Products</button>
+            <button>Services</button>
+            <button>Contact Us</button>
+            <button>About Us</button>
+        </div>
     </div>
-        
 </body>
 </html>
