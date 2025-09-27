@@ -10,13 +10,8 @@
 
         #box {
             background-color: rgb(38, 163, 40);
-            color: rgb(3, 1, 25);
             text-align: left;
             height: 60px;
-            font-size: 30px;     
-            font-weight: bold;  
-            font-family: "Arial", sans-serif;
-            letter-spacing: 2px; 
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -24,6 +19,18 @@
         }
 
         
+        .company-name {
+            font-size: 32px;
+            font-weight: bold;
+            font-family: "Georgia", serif;
+            letter-spacing: 2px;
+            background: linear-gradient(to right, #ffffff, #ffe600);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+    
         .menu button {
             background-color: white;
             color: rgb(38, 163, 40);
@@ -45,7 +52,7 @@
 </head>
 <body>
     <div id="box">
-        Gayathri Enterprises
+        <span class="company-name">Gayathri Enterprises</span>
         <div class="menu">
             <button>Home</button>
             <button>Products</button>
