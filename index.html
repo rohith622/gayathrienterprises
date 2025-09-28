@@ -66,6 +66,35 @@
         .hidden {
             display: none;
         }
+        .ad-banner {
+    background: linear-gradient(90deg, #f9ffb7, #ffe680);
+    border: 2px solid #00ff11;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px;
+    margin: 15px 0;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    animation: blink 1.5s infinite;
+}
+.ad-banner button {
+    background: #2200ff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.ad-banner button:hover {
+    background: #e90918;
+}
+@keyframes blink {
+    50% { opacity: 0.6; }
+}
     </style>
 </head>
 <body>
@@ -82,37 +111,15 @@
             <a href="#seeds">Seeds</a>
             <a href="#about">About Us</a>
         </div>
+
     </div>
 
-    <div id="fertilizers">
-        <h2>Fertilizers</h2>
-        <p>High Quality Fertlizers ...</p>
-        <button onclick="toggleDiv('fertilizers')">Hide/Show Fertilizers</button>
+    
+    <div id="advertisement" class="ad-banner">
+        🎉 Special Offer: <strong>30% OFF on Urea Fertilizer</strong> 🎉  
+        <!-- <button onclick="alert('Offer Applied!')">Shop Now</button> -->
     </div>
 
-    <div id="pesticides">
-        <h2>Pesticides</h2>
-        <p>Our pesticides are effective ...</p>
-        <button onclick="toggleDiv('pesticides')">Hide/Show Pesticides</button>
-    </div>
 
-    <div id="seeds">
-        <h2>Seeds</h2>
-        <p>We offer a variety of seeds ...</p>
-        <button onclick="toggleDiv('seeds')">Hide/Show Seeds</button>
-    </div>
-
-    <div id="about">
-        <h2>About Us</h2>
-        <p>Gayathri Enterprises is dedicated ...</p>
-        <button onclick="toggleDiv('about')">Hide/Show About Us</button>
-    </div>  
-
-    <script>
-        function toggleDiv(divId) {
-            const div = document.getElementById(divId);
-            div.classList.toggle("hidden");
-        }
-    </script>
 </body>
 </html>
