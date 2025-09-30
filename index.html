@@ -62,111 +62,127 @@
             margin-left:20%;                
         }    
 
-        
         .hidden {
             display: none;
         }
+
         .ad-banner {
-    background: linear-gradient(90deg, #f9ffb7, #ffe680);
-    border: 2px solid #00ff11;
-    color: #333;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 15px;
-    margin: 15px 0;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    animation: blink 1.5s infinite;
-}
-.ad-banner button {
-    background: #2200ff;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    margin-left: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
-.ad-banner button:hover {
-    background: #e90918;
-}
-@keyframes blink {
-    50% { opacity: 0.6; }
-}
-.catalog {
-    padding: 30px;
-    text-align: left;
-}
-.catalog h2 {
-    padding: 30px 0;
-    font-size: 24px;
-    color: green;
-    margin-bottom: 20px;
-    justify-content: left;
-}
+            background: linear-gradient(90deg, #f9ffb7, #ffe680);
+            border: 2px solid #00ff11;
+            color: #333;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 15px;
+            margin: 15px 0;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            animation: blink 1.5s infinite;
+            cursor: pointer;
+        }
 
-.products {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: left;
-    gap: 30px;
-    flex-wrap: wrap;
-}
+        @keyframes blink {
+            50% { opacity: 0.6; }
+        }
 
-.product-card {
-    border: 2px solid #ffffff;
-    border-radius: 10px;
-    width: 235px;
-    padding: 15px;
-    text-align: center;
-    background: #fff;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: 0.3s;
-}
+        /* Popup message below banner */
+        .offer-popup {
+            display: none;
+            margin: 10px auto;
+            width: 80%;
+            max-width: 500px;
+            background: #ffffff;
+            border: 2px solid #28a745;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: #155724;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            animation: fadeIn 0.5s ease;
+        }
 
-.product-card:hover {
-    transform: scale(1.05);
-    border-color: green;
-}
+        .offer-popup.show {
+            display: block;
+        }
 
-.product-card img {
-    width: 150px;
-    height: auto;
-    display: block;
-    margin: 0 auto 10px;
-    object-fit: cover;
-    border-radius: 8px;
-}
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
-.product-card h3 {
-    margin: 10px 0;
-    font-size: 18px;
-    color: #222;
-}
+        .catalog {
+            padding: 30px;
+            text-align: left;
+        }
+        .catalog h2 {
+            padding: 30px 0;
+            font-size: 24px;
+            color: green;
+            margin-bottom: 20px;
+            justify-content: left;
+        }
 
-.product-card p {
-    font-size: 14px;
-    color: #555;
-}
+        .products {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: left;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
 
-.product-card button {
-    margin-top: 10px;
-    padding: 8px 12px;
-    border: none;
-    background: green;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
+        .product-card {
+            border: 2px solid #ffffff;
+            border-radius: 10px;
+            width: 235px;
+            padding: 15px;
+            text-align: center;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
 
-.product-card button:hover {
-    background: darkgreen;
-}
+        .product-card:hover {
+            transform: scale(1.05);
+            border-color: green;
+        }
 
+        .product-card img {
+            width: 150px;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .product-card h3 {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #222;
+        }
+
+        .product-card p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .product-card button {
+            margin-top: 10px;
+            padding: 8px 12px;
+            border: none;
+            background: green;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .product-card button:hover {
+            background: darkgreen;
+        }
     </style>
 </head>
 <body>
@@ -183,83 +199,78 @@
             <a href="#seeds">Seeds</a>
             <a href="#about">About Us</a>
         </div>
-
     </div>
 
-    
-    <div id="advertisement" class="ad-banner" onclick=" alert ('🎉 30% Discount Applied Successfully! 🎉')">
+    <!-- Offer Banner -->
+    <div id="advertisement" class="ad-banner" onclick="document.getElementById('offerPopup').classList.toggle('show')">
         🎉 Special Offer: <strong>30% OFF on Urea And Dap Fertilizer</strong> 🎉  
-        <!-- <button onclick="alert('Offer Applied!')">Shop Now</button> -->
     </div>
-</div>
-</body>
 
-     <div id="Pesticide catalog" class="catalog">
+    <!-- Stylish Popup below banner -->
+    <div id="offerPopup" class="offer-popup">
+        🎉 30% Discount Applied Successfully! 🎉
+    </div>
+
+    <!-- Fertilizer Catalog -->
+    <div id="Pesticide catalog" class="catalog">
         <h2>Fertilizer Catalog</h2>
         <ul class="products">
             <li class="product-card">
                 <img src="images/urea2.png" alt="Bag of urea fertilizer displayed on a shelf in a well-lit store environment">
                 <h3>Urea Fertilizer</h3>
                 <p>Organised By Government.</p>
-                <!-- <button>Add to Cart</button> -->
             </li>
             <li class="product-card" class="catalog">
                 <img src="images/DAP.png" alt="Bag of DAP fertilizer displayed on a shelf in a well-lit store environment">
                 <h3>DAP Fertilizer</h3>
                 <p>Organised By Government.</p>
-                <!-- <button>Add to Cart</button> -->
             </li>
             <li class="product-card" class="catalog">
                 <img src="images/mop.png" alt="Bag of MOP fertilizer displayed on a shelf in a well-lit store environment">
                 <h3>MOP Fertilizer</h3>
                 <p>Organised By Government.</p>
-                <!-- <button>Add to Cart</button> -->
             </li>
             <li class="product-card" class="catalog">
                 <img src="images/pesticide.png" alt="Bag of SSP fertilizer displayed on a shelf in a well-lit store environment">
                 <h3>13:13:13</h3>
                 <p>Organised By Government.</p>
-                <!-- <button>Add to Cart</button> -->
             </li>
             <li class="product-card" class="catalog">
                 <img src="images/Amistar.png" alt="Bag of SSP fertilizer displayed on a shelf in a well-lit store environment">
                 <h3>Amistar</h3>
                 <p>Organised By Government.</p>
-                <!-- <button>Add to Cart</button> -->
             </li>
             <div class="product-card">
-    <img src="images/Quantis.png" alt="Quantis">
-    <h3>Quantis</h3>
-    <p>Organised By Government.</p>
-    <!-- <button>Add to Cart</button> -->
-</div>
+                <img src="images/Quantis.png" alt="Quantis">
+                <h3>Quantis</h3>
+                <p>Organised By Government.</p>
+            </div>
             <div class="product-card">
-    <img src="images/maize seeds.png" alt="C.P 3.3.3">
-    <h3>C.P 3.3.3</h3>  
-    <p>Organised By Government.</p>
-    <!-- <button>Add to Cart</button> -->
-  </div>
-    <div class="product-card">
-        <img src="images/image.png" alt="Bag of SSP fertilizer displayed on a shelf in a well-lit store environment">
-        <h3>Glycil</h3>  
-        <p>Organised By Government.</p>
-        <!-- <button>Add to Cart</button> -->
-         </div>
+                <img src="images/maize seeds.png" alt="C.P 3.3.3">
+                <h3>C.P 3.3.3</h3>  
+                <p>Organised By Government.</p>
+            </div>
+            <div class="product-card">
+                <img src="images/image.png" alt="Bag of SSP fertilizer displayed on a shelf in a well-lit store environment">
+                <h3>Glycil</h3>  
+                <p>Organised By Government.</p>
+            </div>
             <div class="product-card">  
-    <img src="images/image copy.png" alt="Maize Seeds">
-    <h3>calypso</h3>  
-    <p>Organised By Government.</p>
-    <!-- <button>Add to Cart</button> -->
+                <img src="images/image copy.png" alt="Maize Seeds">
+                <h3>calypso</h3>  
+                <p>Organised By Government.</p>
+            </div>
+            <div class="product-card">  
+                <img src="images/image copy 2.png" alt="Glypho">
+                <h3>Glypho</h3>  
+                <p>Organised By Government.</p>
+            </div>
+            <div class="product-card">
+                <img src="images/image copy 3.png" alt="Glytop">
+                <h3>Glytop</h3>  
+                <p>Organised By Government.</p>
+            </div>
+        </ul>
     </div>
-     <div class="product-card">  
-    <img src="images/image copy 2.png" alt="Glypho">
-    <h3>Glypho</h3>  
-    <p>Organised By Government.</p>
-    <!-- <button>Add to Cart</button> -->
-     </div>
-        <div class="product-card">
-    <img src="images/image copy 3.png" alt="Glytop">
-    <h3>Glytop</h3>  
-    <p>Organised By Government.</p>
-    <!-- <button>Add to Cart</button> -->
-     </div>
+</body>
+</html>
