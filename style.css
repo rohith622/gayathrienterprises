@@ -11,8 +11,15 @@
     width:100%;
     min-width: 0;
     box-sizing: border-box;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
     overflow: hidden;
+    transition: transform 0.3s ease-out
+}
+body.scrolled #header {
+    transform: translateY(-100%); /* Moves the header completely up and out of view */
 }
 
 .logo-container {
@@ -64,14 +71,25 @@
     font-weight: bold;
     padding: 15px;
     margin: 15px 0;
+    margin-top: 85px;
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     animation: blink 1.5s infinite;
     cursor: pointer;
+     transition: opacity 0.3s ease-out, margin-top 0.3s ease-out; 
 }
-@keyframes blink {
-    50% { opacity: 0.6; }
+/* Style to hide the offer banner when the 'scrolled' class is on the body */
+body.scrolled #advertisement {
+    opacity: 0; /* Fades out the banner */
+    pointer-events: none; /* Disables clicks once hidden */
+    margin-top: 15px; /* Optional: Adjust margin if needed, or simply let opacity handle the hide */
+}
+
+ 
+ 
+    @keyframes blink {
+    50% {opacity: 0.6;}
 }
 
 /* Popup message below banner */
