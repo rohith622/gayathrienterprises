@@ -1,5 +1,5 @@
 body {
-    /* Add padding-top equal to the combined height of the fixed header (60px) and fixed banner (49px approx) + margins (30px) */
+
     padding-top: 139px; 
     margin: 0; 
 }
