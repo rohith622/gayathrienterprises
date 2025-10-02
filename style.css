@@ -1,25 +1,25 @@
- body {
+body {
+    /* Add padding-top equal to the combined height of the fixed header (60px) and fixed banner (49px approx) + margins (30px) */
+    padding-top: 139px; 
     margin: 0; 
 }
+
 #header { 
     background-color: rgba(38, 163, 40, 0.598);
     height: 60px;
     display: flex;
     align-items:center;
     padding: 0 20px;
-    margin-top: 10px;
     width:100%;
     min-width: 0;
     box-sizing: border-box;
-    position: fixed;
+    /* 🎯 SET TO FIXED POSITION AT THE VERY TOP */
+    position: fixed; 
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 1000; 
     overflow: hidden;
-    transition: transform 0.3s ease-out
-}
-body.scrolled #header {
-    transform: translateY(-100%); /* Moves the header completely up and out of view */
+    /* REMOVED: transition: transform 0.3s ease-out; */
 }
 
 .logo-container {
@@ -63,33 +63,29 @@ body.scrolled #header {
     display: none;
 }
 
-.ad-banner {
+#advertisement {
     background: linear-gradient(90deg, #f9ffb7, #ffe680);
     border: 2px solid #00ff11;
     color: #333;
     font-size: 16px;
     font-weight: bold;
     padding: 15px;
-    margin: 15px 0;
-    margin-top: 85px;
+    position: fixed;
+    top: 60px; 
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 999;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 0; 
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     animation: blink 1.5s infinite;
     cursor: pointer;
-     transition: opacity 0.3s ease-out, margin-top 0.3s ease-out; 
-}
-/* Style to hide the offer banner when the 'scrolled' class is on the body */
-body.scrolled #advertisement {
-    opacity: 0; /* Fades out the banner */
-    pointer-events: none; /* Disables clicks once hidden */
-    margin-top: 15px; /* Optional: Adjust margin if needed, or simply let opacity handle the hide */
+
 }
 
- 
- 
-    @keyframes blink {
-    50% {opacity: 0.6;}
+@keyframes blink {
+    50% { opacity: 0.6; }
 }
 
 /* Popup message below banner */
@@ -117,6 +113,7 @@ body.scrolled #advertisement {
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* The rest of the content (catalog) styles remain the same */
 .catalog {
     padding: 30px;
     text-align: left;

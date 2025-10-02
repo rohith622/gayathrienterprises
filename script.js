@@ -11,12 +11,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     function handleScroll() {
         if (window.scrollY > SCROLL_THRESHOLD) {
-            // Add 'scrolled' class if not present
+            // Add 'scrolled' class
             if (!body.classList.contains('scrolled')) {
                 body.classList.add('scrolled');
             }
         } else {
-            // Remove 'scrolled' class if present
+            // Remove 'scrolled' class
             if (body.classList.contains('scrolled')) {
                 body.classList.remove('scrolled');
             }
@@ -26,6 +26,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Attach the function to the global scroll event
     window.addEventListener('scroll', handleScroll);
 
-    // Initial check in case the page loads scrolled down
+    // Initial check
     handleScroll();
 });
