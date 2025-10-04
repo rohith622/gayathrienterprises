@@ -179,3 +179,31 @@ body {
 .product-card button:hover {
     background: darkgreen;
 }
+
+        html {
+            scroll-behavior: smooth; /* smooth scrolling effect */
+        }
+        nav {
+            background: #2a9d8f;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 50px;
+            min-height: 100vh; /* full screen sections */
+        }
+        #fertilizers { background: #f1f1f1; }
+        #pesticides { background: #e9f7ef; }
+        #seeds { background: #fcefee; }
+        #aboutus { background: #eef2ff; }
+        #contact {background: #fff3cd;}
