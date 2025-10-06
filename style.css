@@ -205,5 +205,11 @@ body {
         #fertilizers { background: #f1f1f1; }
         #pesticides { background: #e9f7ef; }
         #seeds { background: #fcefee; }
-        #aboutus { background: #eef2ff; }
+        #aboutus { background: #07f81bed; }
         #contact {background: #fff3cd;}
+    
+    .about-section {
+    margin: 80px auto;
+    max-width: 1200px;
+    padding: 20px;
+}

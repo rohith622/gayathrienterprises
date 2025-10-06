@@ -6,3 +6,4 @@ document.addEventListener("DOMContentLoaded", function () {
         offerPopup.classList.toggle("show");
     });
 });
+
