@@ -6,6 +6,19 @@ document.addEventListener("DOMContentLoaded", function () {
         offerPopup.classList.toggle("show");
     });
 });
+// JavaScript for Gayathri Enterprises
+
+// Wait until the page fully loads
+document.addEventListener("DOMContentLoaded", function() {
+    const advertisement = document.getElementById('advertisement');
+    const offerPopup = document.getElementById('offerPopup');
+
+    // Toggle offer popup on advertisement click
+    advertisement.addEventListener('click', function() {
+        offerPopup.classList.toggle('show');
+    });
+});
+
 
 document.getElementById("loginForm").addEventListener("submit", function(event) {
     event.preventDefault(); // prevent form reload
@@ -15,7 +28,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     const error = document.getElementById("error");
 
     // Example credentials
-    const validUser = "admin";
+    const validUser = "9000921775";
     const validPass = "12345";
 
     if (username === validUser && password === validPass) {
