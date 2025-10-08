@@ -318,6 +318,7 @@ body {
 #logoutBtn {
     position: absolute;      /* positions it relative to header */
     top: 20px;
+    position: fixed; 
     right: 20px;
     background-color: red;
     color: white;
