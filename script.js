@@ -1,5 +1,13 @@
 // Wait until page loads
 document.addEventListener("DOMContentLoaded", function() {
+
+
+    // --- LOGIN CHECK ---
+// Redirect users who are not logged in
+if (!sessionStorage.getItem("isLoggedIn") && window.location.pathname.includes("index.html")) {
+    window.location.href = "login.html";
+}
+
     
     // ---- LOGIN FUNCTIONALITY ----
     const loginForm = document.getElementById("loginForm");
