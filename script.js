@@ -1,54 +1,41 @@
-// Wait until page loads
 document.addEventListener("DOMContentLoaded", function() {
-
-
-    // --- LOGIN CHECK ---
-// Redirect users who are not logged in
-if (!sessionStorage.getItem("isLoggedIn") && window.location.pathname.includes("index.html")) {
-    window.location.href = "login.html";
-}
-
-    
-    // ---- LOGIN FUNCTIONALITY ----
+    const path = window.location.pathname;
+    if (!sessionStorage.getItem("isLoggedIn") && path.includes("index.html")) {
+        window.location.href = "login.html";
+    }
+    if (sessionStorage.getItem("isLoggedIn") && path.includes("login.html")) {
+        window.location.href = "index.html";
+    }
     const loginForm = document.getElementById("loginForm");
     const errorMsg = document.getElementById("error");
 
-    if(loginForm) {
+    if (loginForm) {
         loginForm.addEventListener("submit", function(e) {
-            e.preventDefault(); 
-
+            e.preventDefault();
             const username = document.getElementById("username").value.trim();
             const password = document.getElementById("password").value.trim();
-
-            // Simple login check
-            if(username === "9000921775" && password === "123456") {
-                sessionStorage.setItem("isLoggedIn", "true"); // Save login flag
-                window.location.href = "index.html"; // Redirect to main page
+            if (username === "9000921775" && password === "123456") {
+                sessionStorage.setItem("isLoggedIn", "true");
+                window.location.href = "index.html";
             } else {
                 errorMsg.textContent = "❌ Invalid username or password!";
             }
         });
     }
-
-    // ---- LOGOUT FUNCTIONALITY ----
     const logoutBtn = document.getElementById("logoutBtn");
-    if(logoutBtn) {
+    if (logoutBtn) {
         logoutBtn.addEventListener("click", function() {
-            sessionStorage.removeItem("isLoggedIn"); // Clear login flag
+            sessionStorage.removeItem("isLoggedIn");
             alert("✅ You have successfully logged out!");
-            window.location.href = "login.html"; // Redirect to login
+            window.location.href = "login.html";
         });
     }
-
-    // ---- ADVERTISEMENT POPUP ----
     const advertisement = document.getElementById("advertisement");
     const offerPopup = document.getElementById("offerPopup");
 
-    if(advertisement && offerPopup) {
+    if (advertisement && offerPopup) {
         advertisement.addEventListener("click", function() {
             offerPopup.classList.toggle("show");
         });
     }
 });
-  
-       
