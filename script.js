@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if(loginForm) {
         loginForm.addEventListener("submit", function(e) {
-            e.preventDefault(); // Prevent form from reloading page
+            e.preventDefault(); 
 
             const username = document.getElementById("username").value.trim();
             const password = document.getElementById("password").value.trim();
