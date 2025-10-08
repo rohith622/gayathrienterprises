@@ -1,40 +1,46 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const adBanner = document.getElementById("advertisement");
+// Wait until page loads
+document.addEventListener("DOMContentLoaded", function() {
+    
+    // ---- LOGIN FUNCTIONALITY ----
+    const loginForm = document.getElementById("loginForm");
+    const errorMsg = document.getElementById("error");
+
+    if(loginForm) {
+        loginForm.addEventListener("submit", function(e) {
+            e.preventDefault(); // Prevent form from reloading page
+
+            const username = document.getElementById("username").value.trim();
+            const password = document.getElementById("password").value.trim();
+
+            // Simple login check
+            if(username === "9000921775" && password === "123456") {
+                sessionStorage.setItem("isLoggedIn", "true"); // Save login flag
+                window.location.href = "index.html"; // Redirect to main page
+            } else {
+                errorMsg.textContent = "❌ Invalid username or password!";
+            }
+        });
+    }
+
+    // ---- LOGOUT FUNCTIONALITY ----
+    const logoutBtn = document.getElementById("logoutBtn");
+    if(logoutBtn) {
+        logoutBtn.addEventListener("click", function() {
+            sessionStorage.removeItem("isLoggedIn"); // Clear login flag
+            alert("✅ You have successfully logged out!");
+            window.location.href = "login.html"; // Redirect to login
+        });
+    }
+
+    // ---- ADVERTISEMENT POPUP ----
+    const advertisement = document.getElementById("advertisement");
     const offerPopup = document.getElementById("offerPopup");
 
-    adBanner.addEventListener("click", function () {
-        offerPopup.classList.toggle("show");
-    });
-});
-// JavaScript for Gayathri Enterprises
-
-// Wait until the page fully loads
-document.addEventListener("DOMContentLoaded", function() {
-    const advertisement = document.getElementById('advertisement');
-    const offerPopup = document.getElementById('offerPopup');
-
-    // Toggle offer popup on advertisement click
-    advertisement.addEventListener('click', function() {
-        offerPopup.classList.toggle('show');
-    });
-});
-
-
-document.getElementById("loginForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // prevent form reload
-
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
-    const error = document.getElementById("error");
-
-    // Example credentials
-    const validUser = "9000921775";
-    const validPass = "12345";
-
-    if (username === validUser && password === validPass) {
-        alert("Welcome to Gayathri Enterprises ");
-        window.location.href = "index.html"; // redirect to home page
-    } else {
-        error.textContent = "Invalid username or password!";
+    if(advertisement && offerPopup) {
+        advertisement.addEventListener("click", function() {
+            offerPopup.classList.toggle("show");
+        });
     }
 });
+  
+       

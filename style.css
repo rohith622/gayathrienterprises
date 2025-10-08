@@ -314,3 +314,30 @@ body {
 .forgot:hover {
     text-decoration: underline;
 }
+/* Logout button styling */
+#logoutBtn {
+    position: absolute;      /* positions it relative to header */
+    top: 20px;
+    right: 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: Arial, sans-serif; /* matches other header elements */
+    transition: 0.3s;       /* smooth hover effect */
+    z-index: 1000;  
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1)  ;
+}
+
+/* Hover effect */
+#logoutBtn:hover {
+    background-color: darkred;
+}
+@keyframes blinkAnim {
+    0%, 100% { background-color: #fb0193fa; }
+    50% { background-color: #e3eb04; }
+}
+
