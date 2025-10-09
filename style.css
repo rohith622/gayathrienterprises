@@ -341,4 +341,8 @@ body {
     0%, 100% { background-color: #fb0193fa; }
     50% { background-color: #e3eb04; }
 }
-
+#errorMsg {
+  color: red;
+  margin-top: 10px;
+  font-weight: bold;
+}
