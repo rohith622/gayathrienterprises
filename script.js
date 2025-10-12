@@ -48,7 +48,7 @@ if (loginForm) {
     usernameField.style.border = "2px solid red";
     passwordField.style.border = "2px solid red";
 }
-    });
+        });
 
     // Live validation — remove red border when user starts typing
     const inputs = document.querySelectorAll("#username, #password");
