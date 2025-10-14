@@ -346,3 +346,13 @@ body {
   margin-top: 10px;
   font-weight: bold;
 }
+footer {
+    background-color: #1bf507;      /* Dark background */
+    color: #fff;                 /* White text */
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
