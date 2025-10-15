@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Gayathri Enterprises</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="script.js" defer></script>
     
 
@@ -16,12 +17,12 @@
             </div>
             <div id="title" class="company-name">Gayathri Enterprises</div>
 
-            <div id="menu" class="menu">
-                <a href="#Fertlizers">Fertlizers</a>
-                <a href="#pesticides">Pesticides</a>
-                <a href="#seeds">se         eds</a>
-                <a href="#about">About Us</a>
-            </div>
+        <div id="menu" class="menu">
+            <a href="#fertlizers">Fertilizers</a>
+            <a href="#pesticides">Pesticides</a>
+            <a href="#seeds">Seeds</a>
+            <a href="#about">About Us</a>
+        </div>
         </div>
                 <button id="logoutBtn">Logout</button>
         </div>
@@ -161,21 +162,31 @@
             </ul>
         </div>
         <!-- About Us Section -->
-            <div id="about" class="about-section">
-                 <iframe src="about us.html" width="100%" height="700" frameborder="0" style="border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);"></iframe>
-            </div>
+            <div id="content">
+        <!-- About Section -->
+        <div id="about" class="section active">
+            <h2>About Us</h2>
+            <p>Welcome to Gayathri Enterprises! We provide fertilizers, pesticides, and seeds for farmers.</p>
+        </div>
 
-            <div id="Fertilizers" class="Fertilizers-section">
-                 <iframe src="fert.html" width="100%" height="700" frameborder="0" style="border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);"></iframe>
-            </div>
+        <!-- Fertilizers Section -->
+        <div id="fertlizers" class="section">
+            <h2>Fertilizers</h2>
+            <p>Check out our fertilizer catalog here.</p>
+        </div>
 
-            <div id="pesticides" class="Pesticides-section">
-                <iframe src="pest.html" width="100%" height="700" frameborder="0" style="border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);"></iframe>
-             </div>
+        <!-- Pesticides Section -->
+        <div id="pesticides" class="section">
+            <h2>Pesticides</h2>
+            <p>Explore our pesticide products.</p>
+        </div>
 
-            <div id="seeds" class="Pesticides-section">
-                <iframe src="seed.html" width="100%" height="700" frameborder="0" style="border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);"></iframe>
-            </div>
+        <!-- Seeds Section -->
+        <div id="seeds" class="section">
+            <h2>Seeds</h2>
+            <p>Find high-quality seeds for your crops.</p>
+        </div>
+    </div>
      </div>         
     <footer>
             <div class="footer-container">

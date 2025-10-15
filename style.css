@@ -345,6 +345,14 @@ body {
   color: red;
   margin-top: 10px;
   font-weight: bold;
+  .section {
+    display: none; /* hide all sections by default */
+}
+
+.section.active {
+    display: block; /* show the active section */
+}
+
 }
 footer {
     background-color: #1bf507;      /* Dark background */

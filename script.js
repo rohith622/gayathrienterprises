@@ -80,3 +80,33 @@ if (logoutBtn) {
         });
     }
 });
+
+$(document).ready(function() {
+    // Menu click handler
+    $('#menu a').click(function(e) {
+        e.preventDefault(); // Prevent default anchor
+
+        let page = $(this).attr('href'); // e.g., "#about", "#fertlizers"
+
+        // Mapping menu links to HTML files
+        let pageMap = {
+            "#about": "about.html",
+            "#fertlizers": "fertlizers.html",
+            "#pesticides": "pest.html",
+            "#seeds": "seed.html"
+        };
+
+        if (pageMap[page]) {
+            // Load only the selected HTML into #content
+            $('#content').load(pageMap[page], function() {
+                // Scroll smoothly to #content after loading
+                $('html, body').animate({
+                    scrollTop: $('#content').offset().top
+                }, 600);
+            });
+        }
+    });
+
+    // Load About page by default on page load
+    $('#content').load("about.html");
+});
