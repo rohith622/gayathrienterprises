@@ -82,13 +82,13 @@ if (logoutBtn) {
 });
 
 $(document).ready(function() {
-    // Menu click handler
+    
     $('#menu a').click(function(e) {
-        e.preventDefault(); // Prevent default anchor
+        e.preventDefault(); 
 
         let page = $(this).attr('href'); // e.g., "#about", "#fertlizers"
 
-        // Mapping menu links to HTML files
+       
         let pageMap = {
             "#about": "about.html",
             "#fertlizers": "fertlizers.html",
@@ -97,9 +97,9 @@ $(document).ready(function() {
         };
 
         if (pageMap[page]) {
-            // Load only the selected HTML into #content
+           
             $('#content').load(pageMap[page], function() {
-                // Scroll smoothly to #content after loading
+                
                 $('html, body').animate({
                     scrollTop: $('#content').offset().top
                 }, 600);
@@ -107,6 +107,53 @@ $(document).ready(function() {
         }
     });
 
-    // Load About page by default on page load
+    
     $('#content').load("about.html");
+});
+
+
+// Array of products
+const products = [
+    { name: "Urea Fertilizer", desc: "Organised By Government.", image: "images/urea2.png" },
+    { name: "DAP Fertilizer", desc: "Organised By Government.", image: "images/DAP.png" },
+    { name: "MOP Fertilizer", desc: "Organised By Government.", image: "images/mop.png" },
+    { name: "13:13:13", desc: "Organised By Government.", image: "images/pesticide.png" },
+    { name: "Amistar", desc: "Organised By Government.", image: "images/Amistar.png" },
+    { name: "Quantis", desc: "Organised By Government.", image: "images/Quantis.png" },
+    { name: "C.P 3.3.3", desc: "Organised By Government.", image: "images/maize seeds.png" },
+    { name: "Glycil", desc: "Organised By Government.", image: "images/image.png" },
+    { name: "calypso", desc: "Organised By Government.", image: "images/image copy.png" },
+    { name: "Glypho", desc: "Organised By Government.", image: "images/image copy 2.png" },
+    { name: "Glytop", desc: "Organised By Government.", image: "images/image copy 3.png" },
+    { name: "Ampligo", desc: "Organised By Government.", image: "images/image copy 4.png" },
+    { name: "Decide", desc: "Organised By Government.", image: "images/DI.png" },
+    { name: "Actara", desc: "Organised By Government.", image: "images/image copy 5.png" },
+    { name: "Fenny", desc: "Organised By Government.", image: "images/image copy 6.png" },
+    { name: "AADAT", desc: "Organised By Government.", image: "images/image33.png" },
+    { name: "katar-505", desc: "Organised By Government.", image: "images/image copy 8.png" },
+    { name: "Solamon", desc: "Organised By Government.", image: "images/solomon.png" },
+    { name: "AWARD", desc: "Organised By Government.", image: "images/image copy 4.png" },
+    { name: "TROT", desc: "Organised By Government.", image: "images/image copy 7.png" },
+    { name: "Tag Turbo", desc: "Organised By Government.", image: "images/image copy 9.png" },
+    { name: "Detect", desc: "Organised By Government.", image: "images/image.png" },
+    { name: "Googly", desc: "Organised By Government.", image: "images/image copy.png" },
+    { name: "Armour", desc: "Organised By Government.", image: "images/image copy 2.png" }
+];
+
+
+const productsContainer = document.getElementById('products');
+
+
+productsContainer.innerHTML = '';
+
+
+products.forEach(product => {
+    const li = document.createElement('li');
+    li.className = 'product-card';
+    li.innerHTML = `
+        <img src="${product.image}" alt="${product.name}">
+        <h3>${product.name}</h3>
+        <p>${product.desc}</p>
+    `;
+    productsContainer.appendChild(li);
 });

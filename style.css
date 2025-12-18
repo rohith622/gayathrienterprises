@@ -342,10 +342,12 @@ body {
     50% { background-color: #e3eb04; }
 }
 #errorMsg {
-  color: red;
-  margin-top: 10px;
-  font-weight: bold;
-  .section {
+    color: red;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.section {
     display: none; /* hide all sections by default */
 }
 
@@ -353,7 +355,6 @@ body {
     display: block; /* show the active section */
 }
 
-}
 footer {
     background-color: #1bf507;      /* Dark background */
     color: #fff;                 /* White text */
