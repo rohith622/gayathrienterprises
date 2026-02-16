@@ -87,7 +87,6 @@ body {
 @keyframes blink {
     50% { opacity: 0.6; }
 }
-
 /* Popup message below banner */
 .offer-popup {
     display: none;
@@ -277,8 +276,9 @@ body {
     border-radius: 6px;
     cursor: pointer;
     font-size: 17px;
-    font-weight: bold;
+    font-weight: bold; 
     transition: 0.4s;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 /* Blinking animation */
@@ -347,8 +347,8 @@ body {
     font-weight: bold;
 }
 
-.section {
-    display: none; /* hide all sections by default */
+.section { 
+    display: none; 
 }
 
 .section.active {
@@ -356,8 +356,8 @@ body {
 }
 
 footer {
-    background-color: #1bf507;      /* Dark background */
-    color: #fff;                 /* White text */
+    background-color: #1bf507;      
+    color: #fff;                 
     padding: 15px 0;
     text-align: center;
     position: relative;
